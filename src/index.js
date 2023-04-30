@@ -10,7 +10,7 @@ fetch(imgUrl)
     .then(dogs => {
         dogs.message.forEach(dog => {
             const dogImg = document.createElement("img");
-            
+
             dogImg.setAttribute("src", dog);
             dogImages.appendChild(dogImg);
         })
@@ -36,5 +36,9 @@ fetch(breedUrl)
                     breedLi.appendChild(innerUl);
                 })
             }
+
+            breedLi.addEventListener("click", function() {
+                this.style.color = "#2A56C7"
+            })
         }
     })
